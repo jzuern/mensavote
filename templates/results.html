@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+<title>{{ data.question }}</title>
+<link rel = "stylesheet"
+type = "css"
+href = "chart.css" />
+</head>
+
+<body>
+<h1>Results for</h1>
+{{ data.question }}
+
+<ul>
+{% for e in votes_essen_1 %}
+  <li>{{ e }} {{ votes_essen_1[e] }}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for e in votes_essen_2 %}
+  <li>{{ e }} {{ votes_essen_2[e] }}</li>
+{% endfor %}
+</ul>
+
+
+<div class="container vertical flat">
+  <h2>Vertical, Flat</h2>
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>100%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>75%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>60%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>20%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>34%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>82%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
+
+
+
+
