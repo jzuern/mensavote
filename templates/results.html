@@ -1,15 +1,37 @@
 <!doctype html>
 <html>
-
 <head>
 <title>{{ data.question }}</title>
-<link rel = "stylesheet"
-type = "css"
-href = "chart.css" />
+  <link type="text/css" rel="stylesheet" href="css/chart.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+
+p {
+  font-family: font-family: 'Roboto', sans-serif;
+}
+</style>
 </head>
 
 <body>
-<h1>Results for</h1>
+<h1>Results for Essen 1</h1>
 {{ data.question }}
 
 <ul>
@@ -18,6 +40,9 @@ href = "chart.css" />
 {% endfor %}
 </ul>
 
+<h1>Results for Essen 2</h1>
+
+
 <ul>
 {% for e in votes_essen_2 %}
   <li>{{ e }} {{ votes_essen_2[e] }}</li>
@@ -25,59 +50,34 @@ href = "chart.css" />
 </ul>
 
 
-<div class="container vertical flat">
-  <h2>Vertical, Flat</h2>
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>100%</span>
-      </div>
-    </div>
-  </div>
+</body>
 
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>75%</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>60%</span>
-      </div>
-    </div>
-  </div>
+{% for e in votes_essen_2 %}
+  <div class="container">
+  <div class="skills html">{{ votes_essen_2[e] }}</div>
+</div>
+{% endfor %}
 
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>20%</span>
-      </div>
-    </div>
-  </div>
+<p>HTML</p>
 
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>34%</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="progress-bar">
-    <div class="progress-track">
-      <div class="progress-fill">
-        <span>82%</span>
-      </div>
-    </div>
-  </div>
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">80%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">65%</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php">60%</div>
 </div>
 
 
-</body>
 
 </html>
 

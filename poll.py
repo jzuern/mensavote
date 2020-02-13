@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 import os
 from utils import get_today_menu
-app = Flask(__name__)
 
 
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='static',
+            template_folder='templates')
 
 
 menu_items = get_today_menu()

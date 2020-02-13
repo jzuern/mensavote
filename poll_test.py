@@ -15,7 +15,7 @@ class PollTestCase(unittest.TestCase):
 
     def test_main_page(self):
         rv = self.app.get('/')
-        self.assertRegexpMatches(rv.data, '<title>Which web framework do you use\?</title>')
+        self.assertRegexpMatches(rv.data, '<title>Which templates framework do you use\?</title>')
         self.assertRegexpMatches(rv.data, '<input type="radio" name="field" value="Flask"> Flask<br>')
 
     @unittest.expectedFailure
