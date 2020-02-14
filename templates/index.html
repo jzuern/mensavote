@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<script type="text/javascript">
+        function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           if(e.style.display == 'block')
+          e.style.display = 'none';
+           else
+              e.style.display = 'block';
+        }
+</script>
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-155240012-2', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+	<head>
+		<title>Mensavote</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="static/css/main_mm.css" />
+		<link rel="stylesheet" href="static/css/chart.css" />
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">MensaVote</a>
+				<nav>
+					<a href="#">Home</a>
+				</nav>
+			</header>
+
+        <h1>{{ data.question }}</h1>
+        <h2>{{ 'Essen 1' }}</h2>
+        <h3>{{ data.essen_1 }}</h3>
+        <form action="/poll">
+          {% for e in data.like %}
+             <input type="radio" name="field_essen_1" value="{{ e }}"> {{ e }}<br>
+          {% endfor %}
+          <input type="submit" value="Vote" />
+        </form>
+
+        <h2>{{ 'Essen 2' }}</h2>
+        <h3>{{ data.essen_2 }}</h3>
+        <form action="/poll">
+          {% for e in data.like %}
+             <input type="radio" name="field_essen_2" value="{{ e }}"> {{ e }}<br>
+          {% endfor %}
+          <input type="submit" value="Vote" />
+        </form>
+
+		<!-- Main -->
+			<section id="about" class="wrapper style special">
+				<div class="inner">
+					<div class="content">
+						<header class="special">
+							<h2>Abstract</h2>
+						</header>
+						<p>Mobile robots operating in unknown urban environments encounter a wide range of complex terrains to which they must adapt their planned trajectory for safe and efficient navigation. Most existing approaches utilize supervised learning to classify terrains from either an exteroceptive or a proprioceptive sensor modality. However, this requires a tremendous amount of manual labeling effort for each newly encountered terrain as well as for variations of terrains caused by changing environmental conditions. In this work, we propose a novel terrain classification framework leveraging an unsupervised proprioceptive classifier that learns from vehicle-terrain interaction sounds to self-supervise an exteroceptive classifier for pixel-wise semantic segmentation of images. To this end, we first learn a discriminative embedding space for vehicle-terrain interaction sounds from triplets of audio clips formed using visual features of the corresponding terrain patches and cluster the resulting embeddings. We subsequently use these clusters to label the visual terrain patches by projecting the traversed tracks of the robot into the camera images. Finally, we use the sparsely labeled images to train our semantic segmentation network in a weakly supervised manner. We present extensive quantitative and qualitative results that demonstrate that our proprioceptive terrain classifier exceeds the state-of-the-art among unsupervised methods and our self-supervised exteroceptive semantic segmentation model achieves a comparable performance to supervised learning with manually labeled data.</p>
+					</div>
+				</div>
+				<div class="inner" style="width: 40%" align="center">
+      			<img align="center" class="image fit" src="static/images/Approach_full.svg" alt="Overview of the System" />
+            <div>Overview of the System</div>
+        </div>
+			</section>
+
+
+		<!-- Scripts -->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/browser.min.js"></script>
+		<script src="static/js/breakpoints.min.js"></script>
+		<script src="static/js/util.js"></script>
+		<script src="static/js/main.js"></script>
+
+
+
+
+
+	</body>
+</html>

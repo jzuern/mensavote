@@ -2,32 +2,8 @@
 <html>
 <head>
 <title>{{ data.question }}</title>
-  <link type="text/css" rel="stylesheet" href="css/chart.css" />
+  <link type="text/css" rel="stylesheet" href="static/css/chart.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-
-.container {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.skills {
-  text-align: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-}
-
-.html {width: 90%; background-color: #4CAF50;}
-.css {width: 80%; background-color: #2196F3;}
-.js {width: 65%; background-color: #f44336;}
-.php {width: 60%; background-color: #808080;}
-
-p {
-  font-family: font-family: 'Roboto', sans-serif;
-}
-</style>
 </head>
 
 <body>
@@ -59,23 +35,61 @@ p {
 </div>
 {% endfor %}
 
-<p>HTML</p>
+
+<!-- Vertical, rounded -->
 
 
-<p>CSS</p>
-<div class="container">
-  <div class="skills css">80%</div>
+<div class="container vertical rounded">
+  <h2>Vertical, Rounded</h2>
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>100%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>75%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>60%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>20%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>34%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>82%</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<p>JavaScript</p>
-<div class="container">
-  <div class="skills js">65%</div>
-</div>
-
-<p>PHP</p>
-<div class="container">
-  <div class="skills php">60%</div>
-</div>
 
 
 
